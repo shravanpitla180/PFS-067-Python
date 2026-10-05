@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Lambda function-->Anonymous function
+=======
+#Lambda function-->Anonymous function
+>>>>>>> ff4062aadcd8f0f58c0de9bd74139c7b006567ec
 
 # Anonyamous-- without name
 # small anonymous functions 
@@ -24,8 +28,13 @@ print("lambda with multiple parameters")
 add=lambda x ,y : x+y
 print(add(10,40))
 
+<<<<<<< HEAD
 total=lambda a,b,c,d : a+b+c+d
 print(total(1,2,5,8))
+=======
+add=lambda a,b,c,d : a+b+c+d
+print(add(1,2,5,8))
+>>>>>>> ff4062aadcd8f0f58c0de9bd74139c7b006567ec
 
 
 sub=lambda a,b : a - b
@@ -46,6 +55,7 @@ print(check(3))
 # syntax:map(function,iterable)
 print("map() function with lambda")
 # example:-
+<<<<<<< HEAD
 Nums=[1,2,3,4,5,6,7,8,9]
 s=list(map(lambda x: x*x,Nums))
 print(s)
@@ -56,6 +66,18 @@ def squaree(x):
     return x*x
 numbers=[1,2,3,4,5]
 result=map(squaree,numbers)
+=======
+nums=[1,2,3,4,5,6,7,8,9]
+squares = list(map(lambda x :x*x,nums))
+print(squares)
+
+#map() without lambda
+print("map() without lambda")
+def square(x):
+    return x*x
+numbers=[1,2,3,4,5]
+result=map(square,numbers)
+>>>>>>> ff4062aadcd8f0f58c0de9bd74139c7b006567ec
 print(list(result))
 
 
@@ -63,6 +85,7 @@ print(list(result))
 
 #syntax:-->filter(function,iteration)
 print("displaying even numbers using filter()")
+<<<<<<< HEAD
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
 e = filter(lambda x: x % 2 == 0, nums)
 print(list(e))
@@ -96,3 +119,37 @@ print(r)
 name=["shravan","sairam","rajendra","avinash","chatan"]
 w=sorted(name,key=lambda x:x[-1])
 print(w)
+=======
+nums=[1,2,3,4,5,6,7,8]
+result = filter(lambda x : x%2==0 , nums)
+print(list(result))
+
+
+print("displaying odd numbers using filter()")
+nums=[1,2,3,4,5,6,7,8]
+result = filter(lambda x : x%2!=0 , nums)
+print(list(result))
+
+#Reduce()-->It repeatedly applies a function to elements and reduces entire sequence to one final value
+
+# from functools import reduce
+
+print("displaying using reduce()")
+from functools import reduce
+numbers = [1,2,3,4,5]
+result=reduce(lambda a, b : a + b,numbers)
+print(result)
+
+names=["shravan","puppy","ajay","rama"]
+result=sorted(names,key=len)
+print(result)
+
+nums=[3,2,9,7,-6,-8,-9,21]
+result=sorted(nums,key=abs)
+print(result)
+
+# sorted words by last character
+names=["shravan","sairam","rajendra","avinash","chatan"]
+result=sorted(names,key=lambda x:x[-1])
+print(result)
+>>>>>>> ff4062aadcd8f0f58c0de9bd74139c7b006567ec
